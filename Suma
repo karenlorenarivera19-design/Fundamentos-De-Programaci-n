@@ -1,0 +1,28 @@
+Suma de while y for
+
+package Ejercicio5;
+import java.util.Scanner;
+public class Ejercicio5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Desde (Límite inferior): ");
+        int d = entrada.nextInt();
+        
+        System.out.print("Hasta (Límite superior): ");
+        int h = entrada.nextInt();
+        
+        int suma = 0;
+        
+        for (int x = d; x <= h; x++) {
+            suma += x;
+        }
+        
+        System.out.println("Suma acumulada con ciclo FOR = " + suma);
+        entrada.close();
+	}
+
+}
