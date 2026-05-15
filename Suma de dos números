@@ -1,0 +1,23 @@
+Suma de dos números
+package Ejercicio2;
+import java.util.Scanner;
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Ingrese el número A: ");
+        int numeroA = entrada.nextInt();
+        
+        System.out.print("Ingrese el número B: ");
+        int numeroB = entrada.nextInt();
+        
+        int resultado = numeroA + numeroB;
+        
+        System.out.println("El resultado de sumar A + B es: " + resultado);
+        entrada.close();
+	}
+
+}
