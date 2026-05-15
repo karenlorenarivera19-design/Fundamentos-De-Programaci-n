@@ -1,0 +1,38 @@
+Método para encontrar el mayor de tres números
+
+package Ejercicio9;
+import java.util.Scanner;
+public class Ejercicio9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Valor de a: ");
+        int a = entrada.nextInt();
+        System.out.print("Valor de b: ");
+        int b = entrada.nextInt();
+        System.out.print("Valor de c: ");
+        int c = entrada.nextInt();
+        
+        int resultadoMayor = obtenerMayor(a, b, c);
+        
+        System.out.println("El mayor de " + a + ", " + b + " y " + c + " es: " + resultadoMayor);
+        entrada.close();
+    }
+    
+    // Función segmentada para evaluar el mayor de los datos leídos
+    public static int obtenerMayor(int x, int y, int z) {
+        int res;
+        if (x >= y && x >= z) {
+            res = x;
+        } else if (y >= x && y >= z) {
+            res = y;
+        } else {
+            res = z;
+        }
+        return res;
+	}
+
+}
