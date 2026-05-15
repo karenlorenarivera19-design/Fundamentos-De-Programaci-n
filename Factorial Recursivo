@@ -1,0 +1,33 @@
+Factorial Recursivo
+
+package Ejercicio10;
+import java.util.Scanner;
+public class Ejercicio10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Ingrese una cantidad entera para calcular su factorial: ");
+        int numero = entrada.nextInt();
+        
+        if (numero < 0) {
+            System.out.println("El factorial no está definido para números negativos.");
+        } else {
+            long resultado = calcularFactorial(numero);
+            System.out.println("El factorial de " + numero + " es: " + resultado);
+        }
+        entrada.close();
+    }
+    
+    // Función recursiva con su punto de retorno establecido en n <= 1
+    public static long calcularFactorial(int n) {
+        if (n <= 1) {
+            return 1; // Punto de retorno
+        } else {
+            return n * calcularFactorial(n - 1); // Auto-invocación recursiva
+        }
+	
+	}
+
+}
