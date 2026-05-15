@@ -1,0 +1,30 @@
+Suma de rangos con while y for
+
+package Ejercicio4;
+import java.util.Scanner;
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Desde (Límite inferior): ");
+        int d = entrada.nextInt();
+        
+        System.out.print("Hasta (Límite superior): ");
+        int h = entrada.nextInt();
+        
+        int suma = 0;
+        int originalD = d; // Guardar valor para la impresión final
+        
+        while (d <= h) {
+            suma += d;
+            d++;
+        }
+        
+        System.out.println("La suma de los números entre " + originalD + " y " + h + " es: " + suma);
+        entrada.close();
+	}
+
+}
