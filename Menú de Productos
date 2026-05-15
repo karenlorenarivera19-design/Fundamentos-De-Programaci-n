@@ -1,0 +1,54 @@
+Menú de Productos con código 99
+
+package Ejercicio8;
+import java.util.Scanner;
+public class Ejercicio8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner entrada = new Scanner(System.in);
+        int cod = 0;
+        double total = 0;
+        
+        System.out.println("Código\tProducto\tPrecio");
+        System.out.println("1\tHamburguesa\t$25.00");
+        System.out.println("2\tHot dog\t\t$18.00");
+        System.out.println("3\tRefresco\t$10.00");
+        System.out.println("99\tFinalizar compra\n");
+        
+        while (cod != 99) {
+            System.out.print("Ingrese el código del producto: ");
+            cod = entrada.nextInt();
+            
+            if (cod != 99) {
+                System.out.print("Ingrese la cantidad: ");
+                int cant = entrada.nextInt();
+                double sbtot = 0;
+                
+                switch(cod) {
+                    case 1:
+                        sbtot = cant * 25.0;
+                        System.out.println(cant + " Hamburguesa(s) = $" + sbtot);
+                        break;
+                    case 2:
+                        sbtot = cant * 18.0;
+                        System.out.println(cant + " Hot dog(s) = $" + sbtot);
+                        break;
+                    case 3:
+                        sbtot = cant * 10.0;
+                        System.out.println(cant + " Refresco(s) = $" + sbtot);
+                        break;
+                    default:
+                        System.out.println("Código de producto no válido.");
+                        sbtot = 0;
+                        break;
+                }
+                total += sbtot;
+            }
+        }
+        System.out.println("\nImporte total de la cuenta = $" + total);
+        entrada.close();
+	}
+
+}
