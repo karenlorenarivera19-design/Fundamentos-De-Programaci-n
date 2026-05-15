@@ -1,0 +1,23 @@
+Evaluación de nota Aprobado/Reprobado
+
+package Ejercicio3;
+import java.util.Scanner;
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+Scanner entrada = new Scanner(System.in);
+        
+        System.out.print("Ingrese la calificación del estudiante (0-100): ");
+        int calificacion = entrada.nextInt();
+        
+        if (calificacion >= 70) {
+            System.out.println("Estado: Aprobado");
+        } else {
+            System.out.println("Estado: Reprobado");
+        }
+        entrada.close();
+	}
+
+}
